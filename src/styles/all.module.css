@@ -1,0 +1,45 @@
+/*
+    @import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Titan+One|Creepster|Satisfy|Eczar:700");
+    @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+*/
+
+@font-face {
+    font-family: "Titan One";
+    src: url("@assets/fonts/TitanOne-Regular.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("@assets/fonts/Nunito-Regular.ttf");
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "Nunito Bold";
+    src: url("@assets/fonts/Nunito-Bold.ttf");
+    font-style: bold;
+}
+
+* {
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --background-color: #10182f;
+    --primary-color: #1f1f1f;
+    --secondary-color: #3f3f3f;
+    --accent-color: #ffffff;
+}
+
+body {
+    background: var(--background-color);
+    font-family: "Nunito", sans-serif;
+    color: var(--accent-color);
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}

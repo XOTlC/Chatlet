@@ -1,0 +1,8 @@
+{
+    "appId": "org.xotic.chatlet",
+    "appName": "Chatlet",
+    "webDir": "dist",
+    "server": {
+        "androidScheme": "https"
+    }
+}
