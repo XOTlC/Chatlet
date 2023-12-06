@@ -1,5 +1,7 @@
-import Home from "@pages/Home";
+import Landing from "@pages/Navbar/Landing";
+import Settings from "@pages/Navbar/Settings";
 
 export default {
-    Home
+    Landing,
+    Settings
 }

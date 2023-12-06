@@ -1,7 +1,13 @@
-/*
-    @import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Titan+One|Creepster|Satisfy|Eczar:700");
-    @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
-*/
+/*@import url("@assets/font-awesome/css/pro.min.css");
+@import url("@assets/font-awesome/css/pro-v4-shims.min.css");
+@import url("@assets/font-awesome/css/pro-v5-font-face.min.css");
+@import url("@assets/font-awesome/css/pro-v4-font-face.min.css");*/
+
+/* this is temporary, it will be using local fonts */
+@import url("https://ka-f.fontawesome.com/releases/v6.4.2/css/pro.min.css");
+@import url("https://ka-f.fontawesome.com/releases/v6.4.2/css/pro-v4-shims.min.css");
+@import url("https://ka-f.fontawesome.com/releases/v6.4.2/css/pro-v5-font-face.min.css");
+@import url("https://ka-f.fontawesome.com/releases/v6.4.2/css/pro-v4-font-face.min.css");
 
 @font-face {
     font-family: "Titan One";
@@ -12,7 +18,7 @@
 @font-face {
     font-family: "Nunito";
     src: url("@assets/fonts/Nunito-Regular.ttf");
-    font-style: normal; 
+    font-style: normal;
 }
 
 @font-face {
@@ -29,8 +35,7 @@
 
 :root {
     --background-color: #10182f;
-    --primary-color: #1f1f1f;
-    --secondary-color: #3f3f3f;
+    --primary-color: #202850;
     --accent-color: #ffffff;
 }
 
@@ -42,4 +47,136 @@ body {
     padding: 0;
     max-width: 100%;
     overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-blooks {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 50%;
+    left: 50%;
+    background-size: 550px;
+    background-position: -100px -100px;
+    background-image: url("@assets/background.png");
+    opacity: .033;
+    transform: translate(-50%,-50%) rotate(15deg);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    width: 100%;
+    box-sizing: border-box;
+    height: 55px;
+    padding: 0 15px 6px;
+    box-shadow: inset 0 -6px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-title {
+    font-size: 27.5px;
+    font-family: "Titan One", sans-serif;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.navbar-icon {
+    font-size: 25px;
+    color: var(--accent-color);
+    text-align: center;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: filter .25s;
+    margin: auto;
+    width: 100%;
+}
+
+.button-shadow {
+    background: rgba(0, 0, 0, .25);
+    transform: translateY(2px);
+    transition: transform .6s cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-edge,
+.button-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.button-edge {
+    background: var(--primary-color);
+    filter: brightness(0.7);
+}
+
+.button-inside {
+    background: var(--primary-color);
+    min-width: 100px;
+    height: 35px;
+    font-size: 22px;
+    padding: 5px 15px;
+    color: var(--accent-color);
+    border-radius: 5px;
+    font-weight: 700;
+    text-shadow: 0 1.5px rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-4px);
+    transition: transform .6s cubic-bezier(.3, .7, .4, 1);
+}
+
+.button:hover {
+    filter: brightness(110%);
+}
+
+.button:hover .button-inside {
+    transform: translateY(-6px);
+    transition: transform 0.25s cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:active .button-inside {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button:hover .button-shadow {
+    transform: translateY(4px);
+    transition: transform 0.25s cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:active .button-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
 }

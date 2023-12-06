@@ -1,0 +1,61 @@
+.settings-text {
+    font-family: "Nunito Bold", sans-serif;
+    font-size: 44px;
+    margin: 15px 5% 10px;
+    text-align: center;
+}
+
+.container {
+    border-radius: 7px;
+    background-color: var(--primary-color);
+    padding: 15px 20px 22px;
+    box-shadow: inset 0 -7px rgba(0, 0, 0, .2), 0 0 4px rgba(0, 0, 0, .15);
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 3px;
+}
+
+.container-header-title {
+    font-family: "Nunito Bold", sans-serif;
+    font-size: 25px;
+}
+
+.container-header-icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.container-divider {
+    border-radius: 7px;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--accent-color);
+    opacity: 0.25;
+    margin: 10px 0;
+}
+
+.input {
+    border-radius: 7px;
+    border: 2px solid var(--primary-color);
+    outline: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--accent-color);
+    filter: brightness(1.5);
+}
+
+.input:focus {
+    filter: brightness(2);
+}
