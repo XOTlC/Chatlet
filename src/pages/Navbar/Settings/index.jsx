@@ -17,9 +17,9 @@ export default function Settings() {
             }}>
 
                 Server URL
-                <Input placeholder="Server URL"
-                    value={settings.serverURL}
-                    onChange={e => setSettings({ ...settings, server_url: e.target.value })}
+                <Input placeholder="Example: https://blacket.org"
+                    value={settings.main.server_url}
+                    onChange={e => setSettings({ ...settings, main: { ...settings.main, server_url: e.target.value } })}
                 />
 
             </SettingsContainer>

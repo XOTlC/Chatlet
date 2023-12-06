@@ -11,7 +11,5 @@ export function SettingsProvider({ children }) {
 
     useEffect(() => localStorage.setItem("settings", JSON.stringify(settings)), [settings]);
 
-    return <SettingsContext.Provider value={{ settings, setSettings }}>
-        {children}
-    </SettingsContext.Provider>
+    return <SettingsContext.Provider value={{ settings, setSettings }}>{children}</SettingsContext.Provider>;
 }
